@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Tome Nota
+  datasource:
+    url: jdbc:mysql://localhost/tomenota-dev?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        connection:
+          characterEncoding: utf-8
+          connection:
+            CharSet: utf-8
+          useUnicode: true
+server:
+  servlet:
+    context-path: /api
