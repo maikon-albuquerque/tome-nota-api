@@ -20,7 +20,7 @@ public class NoteRepositoryImpl implements NoteRepository {
     }
 
     @Override
-    public Note findById(long id) {
+    public Note findById(Long id) {
         return em.find(Note.class, id);
     }
 
@@ -31,8 +31,8 @@ public class NoteRepositoryImpl implements NoteRepository {
 
     @Override
     public void delete(Note note) {
-        Note deleted = findById(note.getId());
-        em.remove(deleted);
+        Note noteToDelete = findById(note.getId());
+        em.remove(noteToDelete);
     }
 
 }

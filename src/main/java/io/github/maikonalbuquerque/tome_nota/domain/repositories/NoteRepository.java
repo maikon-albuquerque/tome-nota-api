@@ -9,7 +9,7 @@ import java.util.List;
 public interface NoteRepository {
 
     List<Note> findAll();
-    Note findById(long id);
+    Note findById(Long id);
     Note save(Note note);
     void delete(Note note);
 }
